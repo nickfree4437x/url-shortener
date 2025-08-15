@@ -1,0 +1,25 @@
+# Node modules (don't upload them)
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
+
+# Build output (if any)
+dist/
+build/
+
+# Optional: coverage reports
+coverage/
