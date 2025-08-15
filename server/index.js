@@ -16,6 +16,11 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB Connected"))
   .catch(err => console.log("❌ MongoDB Connection Error:", err));
 
+// Sample test route
+app.get("/", (req, res) => {
+  res.json({ message: "API is working fine 🔥" });
+});
+
 // Routes
 app.use("/", urlRoutes);
 
