@@ -10,7 +10,7 @@ export default function AdminPage() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    axios.get("http://localhost:5000/api/admin/urls")
+    axios.get("https://url-shortener-vfmn.onrender.com/api/admin/urls")
       .then(res => {
         // Ensure we have valid data before setting state
         if (Array.isArray(res?.data)) {
@@ -100,7 +100,7 @@ export default function AdminPage() {
                     <tr key={url._id} className="hover:bg-gray-700/30 transition-colors duration-150">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <a
-                          href={`http://localhost:5000/${url.short_code}`}
+                          href={`https://url-shortener-vfmn.onrender.com/${url.short_code}`}
                           target="_blank"
                           rel="noreferrer"
                           className="text-blue-400 hover:text-blue-300 font-mono"

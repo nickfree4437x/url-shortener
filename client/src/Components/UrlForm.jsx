@@ -17,7 +17,7 @@ export default function UrlForm() {
     const fetchPreview = async () => {
       if (longUrl && longUrl.startsWith("http")) {
         try {
-          const res = await axios.post("http://localhost:5000/api/preview", { url: longUrl });
+          const res = await axios.post("https://url-shortener-vfmn.onrender.com/api/preview", { url: longUrl });
           setPreview(res.data);
         } catch {
           setPreview(null);
@@ -34,7 +34,7 @@ export default function UrlForm() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/shorten", { 
+      const res = await axios.post("https://url-shortener-vfmn.onrender.com/api/shorten", { 
         original_url: longUrl,
         expiry_hours: expiryHours ? Number(expiryHours) : null 
       });
